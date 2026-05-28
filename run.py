@@ -34,7 +34,7 @@ class BaseImport(ABC):
             raise ValueError(f"Error loading settings: {e}")
         
         repo_root = Path(__file__).resolve().parent
-        self.client_name_map_filepath = repo_root / Path(self.settings.NAME_MAP_PATH_TEST)
+        self.client_name_map_filepath = repo_root / Path(self.settings.NAME_MAP_PATH)
         self.unwanted_files_dir = repo_root / Path(self.settings.UNWANTED_FILES_DIR)
         self.unwanted_files_dir.mkdir(exist_ok=True)
         
