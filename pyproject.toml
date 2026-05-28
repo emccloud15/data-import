@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=61.0.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "data-import"
+version = "0.1.0"
+requires-python = ">=3.14"
+dependencies = [
+    "click>=8.4.1",
+    "dotenv>=0.9.9",
+    "pandas>=3.0.3",
+    "psycopg2-binary>=2.9.12",
+    "pydantic>=2.13.4",
+    "pyyaml>=6.0.3",
+    "questionary>=2.1.1",
+    "sqlalchemy>=2.0.50",
+]
+
+[tool.setuptools]
+py-modules = ["run","db","exceptions","logger","models"]
+
+
+[project.scripts]
+sf-import = "run:main"

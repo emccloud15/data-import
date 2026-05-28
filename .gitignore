@@ -1,0 +1,13 @@
+.env
+.venv
+__pycache__/
+.DS_Store
+*.yaml
+*.ipynb
+pipeline.py
+/data_maps/unwanted_files
+build/
+dist/
+*.pyc
+*.egg-info/
+
