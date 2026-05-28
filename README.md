@@ -48,7 +48,15 @@ cp .env.example .env
 open .env
 ```
 
-2. Connect to OpenVPN before running the tool.
+2. Connect to OpenVPN or your data warehouse VPN before running the tool.
+
+3. Configure the name map path in `settings.yaml`:
+```yaml
+NAME_MAP_PATH: data_maps/salesforce_filename_map.csv
+UNWANTED_FILES_DIR: data_maps/unwanted_files
+```
+
+The name map is a CSV that tracks every Salesforce file name seen across all migrations and maps it to a consistent internal naming convention. It grows automatically as new files are encountered and should not need to be edited manually beyond initial setup.
 
 The tool can be run from anywhere in your terminal once installed.
 
